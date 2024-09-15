@@ -49,14 +49,14 @@ public class Main {
                 System.out.println("Đã dừng thêm khách hàng");
                 break;
             }
-            if (qlkh.containsKey(makh)) {
+            if (qlkh.containsKey(makh)) { // Nếu mã khách hàng đã tồn tại trong danh sách
                 System.out.println("Mã khách hàng đã tồn tại");
                 continue;
             }
 
             System.out.print("Nhập tên khách hàng: ");
             String tenkh = sc.nextLine();
-            qlkh.put(makh, tenkh);
+            qlkh.put(makh, tenkh); // Thêm mã khách hàng và tên vào danh sách
             System.out.println("Khách hàng đã được thêm. ");
         }
     }
@@ -64,7 +64,7 @@ public class Main {
     private static void findCustomer() {
         System.out.print("Nhập mã khách hàng cần tìm kiếm: ");
         String matk = sc.nextLine();
-        if (qlkh.containsKey(matk)) {
+        if (qlkh.containsKey(matk)) { // Nếu danh sách chứa mã khách hàng
             System.out.println("Thông tin khách hàng: " + "Mã: "+ matk + ", Tên: " + qlkh.get(matk));
         } else {
             System.out.print("Khác hàng chưa tồn tại");
@@ -76,7 +76,7 @@ public class Main {
             System.out.println("Danh sách khách hàng trống.");
         } else {
             System.out.println("--------------Danh sách khách hàng--------------");
-            for (String key : qlkh.keySet()) {
+            for (String key : qlkh.keySet()) { // Duyệt qua tất cả các khóa trong HashMap
                 System.out.println("Mã: " + key + ", Tên: " + qlkh.get(key) + " ");
             }
         }

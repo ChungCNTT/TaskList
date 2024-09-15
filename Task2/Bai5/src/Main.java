@@ -9,6 +9,7 @@ public class Main {
         int b = sc.nextInt();
         System.out.print("Nhập phép toán: ");
         char p = sc.next().charAt(0);
+        // Sử dụng cấu trúc switch-case để thực hiện phép toán dựa trên giá trị của p
         switch(p){
             case '+':
                 int tong = a + b;

@@ -11,11 +11,12 @@ public class Rectangle extends Shape{
         this.width = chieurong;
         this.hight = chieucao;
     }
+    // Phương thức tính diện tích hình chữ nhật
     @Override
     double caculateAre() {
         return width * hight;
     }
-
+    // Phương thức nhập thông tin hình chữ nhật từ bàn phím
     @Override
     public void inShape(Scanner sc) {
         super.inShape(sc);
@@ -25,7 +26,7 @@ public class Rectangle extends Shape{
         this.hight = sc.nextDouble();
         sc.nextLine();
     }
-
+    // Phương thức xuất thông tin hình chữ nhật ra màn hình
     @Override
     public void outShape() {
         super.outShape();

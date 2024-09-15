@@ -9,11 +9,12 @@ public class FullTimeEmployee extends Employee{
     public FullTimeEmployee(){
         super();
     }
+    // Phương thức tính lương của nhân viên toàn thời gian
     @Override
     double caculateSalary() {
         return monthlySalary;
     }
-
+    // Phương thức nhập thông tin của nhân viên từ bàn phím
     @Override
     public void inEmployee(Scanner sc) {
         super.inEmployee(sc);
@@ -21,7 +22,7 @@ public class FullTimeEmployee extends Employee{
         this.monthlySalary = sc.nextDouble();
         sc.nextLine();
     }
-
+    // Phương thức xuất thông tin của nhân viên ra màn hình
     @Override
     public void outEmployee() {
         super.outEmployee();

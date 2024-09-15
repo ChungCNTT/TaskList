@@ -26,17 +26,17 @@ public class Main {
                         break;
                     }
             }
-            try {
-                FileWriter fw = new FileWriter(filename, true);
-                BufferedWriter bw = new BufferedWriter(fw);
-                for (String book : booklist) {
-                    bw.write(book + "\n");
-                }
-                bw.close();
-                fw.close();
-            } catch (Exception e) {
-                System.out.println("Đã có lỗi xảy ra!");
-                e.printStackTrace();
+        try {
+            FileWriter fw = new FileWriter(filename, true);  // Tạo đối tượng FileWriter để mở file và ghi dữ liệu (append mode)
+            BufferedWriter bw = new BufferedWriter(fw);  // Tạo đối tượng BufferedWriter để ghi dữ liệu vào file
+            for (String book : booklist) {  // Duyệt qua từng sách trong danh sách
+                bw.write(book);  // Ghi thông tin sách vào file
             }
+            bw.close();  // Đóng BufferedWriter
+            fw.close();  // Đóng FileWriter
+        } catch (IOException e) {  // Xử lý các lỗi vào/ra
+            System.out.println("Đã có lỗi xảy ra!");  // Hiển thị thông báo lỗi
+            e.printStackTrace();  // In thông tin chi tiết lỗi
+        }
     }
 }

@@ -12,12 +12,12 @@ public class PartTimeEmployee extends Employee{
     public PartTimeEmployee() {
         super();
     }
-
+    // Phương thức tính lương của nhân viên bán thời gian
     @Override
     double caculateSalary() {
         return hourlyRate * hourWorked;
     }
-
+    // Phương thức nhập thông tin của nhân viên từ bàn phím
     @Override
     public void inEmployee(Scanner sc) {
         super.inEmployee(sc);
@@ -27,7 +27,7 @@ public class PartTimeEmployee extends Employee{
         this.hourWorked = sc.nextInt();
         sc.nextLine();
     }
-
+    // Phương thức xuất thông tin của nhân viên ra màn hình
     @Override
     public void outEmployee() {
         super.outEmployee();

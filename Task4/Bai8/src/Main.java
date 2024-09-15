@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
         private static Scanner sc = new Scanner(System.in);
+        // Tạo danh sách sách (TVList) với kiểu dữ liệu ArrayList
         private  static List<String> TVList = new ArrayList<>();
         public static void main(String[] args) {
         System.out.println("Xin mời nhập lựa chọn");
@@ -47,7 +48,7 @@ public class Main {
             String namebook = sc.nextLine();
             while (!namebook.isEmpty()){
                 System.out.print("Nhập tên sách cần thêm: ");
-                TVList.add(namebook);
+                TVList.add(namebook); // Thêm tên sách vào danh sách TVList
                 namebook = sc.nextLine();
             }
         }
@@ -55,7 +56,7 @@ public class Main {
         private static void removeBook(){
             System.out.print("Nhập tên sách cần xóa: ");
             String rvbook = sc.nextLine();
-            if(TVList.remove(rvbook)){
+            if(TVList.remove(rvbook)){ // Nếu sách được xóa thành công
                 System.out.println("Cuốn sách đã được xóa.");
             }else{
                 System.out.println("Cuốn sách không tồn tại.");
@@ -68,7 +69,7 @@ public class Main {
             if(TVList.contains(oldbook)){
                 System.out.print("Nhập tên sách mới: ");
                 String newbook = sc.nextLine();
-                TVList.set(TVList.indexOf(oldbook), newbook);
+                TVList.set(TVList.indexOf(oldbook), newbook);  // Cập nhật tên sách mới vào danh sách tại vị trí của sách cũ
             }else{
                 System.out.print("Cuốn sách này không tồn tại");
             }
@@ -76,12 +77,9 @@ public class Main {
         //In sach
         private static void printBook(){
             System.out.println("-----------THƯ VIỆN-----------");
-            for (String book : TVList) {
+            for (String book : TVList) { // Vòng lặp để duyệt qua từng sách trong danh sách
                 System.out.println(book);
             }
         }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 323a2594008c04759c22c329099c756b5d67dce6
+

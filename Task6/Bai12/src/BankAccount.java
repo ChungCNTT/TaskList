@@ -1,9 +1,9 @@
 public class BankAccount {
     private String accountNumber;
     private double balance;
-    public  BankAccount(){
+    public  BankAccount(){ // Constructor mặc định, khởi tạo đối tượng mà không cần tham số
     }
-    public BankAccount(String account, double sodu){
+    public BankAccount(String account, double sodu){ // Constructor có tham số để khởi tạo đối tượng với số tài khoản và số dư
         this.accountNumber = account;
         this.balance = sodu;
     }
@@ -20,7 +20,7 @@ public class BankAccount {
     public void setBlance(double sodu){
         this.balance = sodu;
     }
-    public void deposit(double amount){
+    public void deposit(double amount){ // Phương thức gửi tiền vào tài khoản
         if(amount > 0){
             balance += amount;
             System.out.println("Gửi tiền thành công. Số dư tài khoản: " + balance);
@@ -28,7 +28,7 @@ public class BankAccount {
             System.out.println("Số tiền gửi phải lớn hơn 0.");
         }
     }
-    public void withdraw(double amount){
+    public void withdraw(double amount){ // Phương thức rút tiền từ tài khoản
         if(amount > 0 && amount <= balance){
             balance -= amount;
             System.out.println("Rút tiền thành công. Số dư tài khoản: " + balance);
